@@ -1,0 +1,1 @@
+{"_invocation_id": "cb136655-06c6-4987-9748-77f39e631270", "linked": {"0": {"name": "source.mta_transformation.mta_raw.raw_trip_updates", "type": "source", "succ": [2]}, "1": {"name": "source.mta_transformation.mta_raw.static_stops", "type": "source", "succ": [2]}, "2": {"name": "model.mta_transformation.mta_arrival_status", "type": "model"}}}
