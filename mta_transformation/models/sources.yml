@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: mta_raw
+    database: mta-transit-project-488901  # Your Project ID
+    schema: mta_data                      # Your Dataset Name
+    tables:
+      - name: raw_trip_updates
+      - name: static_stops

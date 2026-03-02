@@ -1,0 +1,59 @@
+[0m08:05:08.389068 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021814A16C10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000218181FAAD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021817F97F10>]}
+
+
+============================== 08:05:08.394154 | cc188b91-668d-43af-a5a0-14fbb436acbf ==============================
+[0m08:05:08.394154 [info ] [MainThread]: Running with dbt=1.11.6
+[0m08:05:08.396124 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\ashua\\.dbt', 'indirect_selection': 'eager', 'invocation_command': 'dbt init mta_transformation', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m08:05:08.426255 [debug] [MainThread]: Starter project path: C:\Users\ashua\mta_transit_pipeline\venv\Lib\site-packages\dbt\include\starter_project
+[0m08:05:08.514894 [info ] [MainThread]: 
+Your new dbt project "mta_transformation" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m08:05:08.515919 [info ] [MainThread]: Setting up your profile.
+[0m08:06:33.240517 [info ] [MainThread]: Profile mta_transformation written to C:\Users\ashua\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m08:06:33.242517 [debug] [MainThread]: Command `dbt init` succeeded at 08:06:33.242517 after 84.97 seconds
+[0m08:06:33.243517 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002181825AB10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021818259F90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002181825B910>]}
+[0m08:06:33.244517 [debug] [MainThread]: Flushing usage events
+[0m08:06:33.862427 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m08:09:34.963048 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FBD19B20D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FBD1A0A450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FBD19B1990>]}
+
+
+============================== 08:09:34.969087 | 05810841-9436-4147-b69b-d0a411be4ecd ==============================
+[0m08:09:34.969087 [info ] [MainThread]: Running with dbt=1.11.6
+[0m08:09:34.970051 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\ashua\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt run', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m08:09:34.971055 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\ashua\mta_transit_pipeline\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m08:09:34.973089 [debug] [MainThread]: Command `dbt run` failed at 08:09:34.972052 after 0.13 seconds
+[0m08:09:34.973089 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FBD19A9B90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FBCACD8F10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FBD19B1990>]}
+[0m08:09:34.974109 [debug] [MainThread]: Flushing usage events
+[0m08:09:35.733368 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m03:08:30.878329 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F56E732310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F56E9B2E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F56EA7AB90>]}
+
+
+============================== 03:08:30.888310 | 338e9af8-60ad-4075-b6bc-29f7eaf84d0a ==============================
+[0m03:08:30.888310 [info ] [MainThread]: Running with dbt=1.11.6
+[0m03:08:30.889092 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\ashua\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt run', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m03:08:30.890102 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\ashua\mta_transit_pipeline\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m03:08:30.892103 [debug] [MainThread]: Command `dbt run` failed at 03:08:30.891103 after 0.10 seconds
+[0m03:08:30.892103 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F567D79010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F56EA81150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F56EA83FD0>]}
+[0m03:08:30.893140 [debug] [MainThread]: Flushing usage events
+[0m03:08:31.499328 [debug] [MainThread]: An error was encountered while trying to flush usage events
