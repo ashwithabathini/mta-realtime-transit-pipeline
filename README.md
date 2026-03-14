@@ -8,6 +8,7 @@ This project is an end-to-end ELT (Extract, Load, Transform) pipeline that inges
 * **Data Warehouse:** Google BigQuery
 * **Transformation:** dbt (Data Build Tool)
 * **Visualization:** Looker Studio
+  
 ![Flow](Steps.png)
 
 ## 🏗️ Architecture & Lineage
