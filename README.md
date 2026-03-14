@@ -1,7 +1,9 @@
 # NYC MTA Real-Time Transit Data Pipeline
 
 ## 🚀 Executive Summary
-This project is an end-to-end ELT (Extract, Load, Transform) pipeline that ingests high-velocity transit data from the NYC MTA. It processes real-time subway arrival updates to monitor system performance, tracking over **1M records a day** with a 1-minute data freshness latency.
+* The NYC MTA manages millions of daily commutes, yet the complexity of real-time transit data often leaves a "visibility gap" between raw API feeds and actionable operational insights.
+* This project bridges that gap by engineering a high-velocity ELT (Extract, Load, Transform) pipeline that functions as a real-time Digital Twin of the Eighth Avenue Line (A, C, E). By ingesting raw Protobuf streams and applying modular dbt transformations, I’ve built an Automated Operations Center that tracks ~30,000 arrival updates per session with sub-minute latency.
+* This isn't just a dashboard; it’s a Real-Time Data Audit that identifies bottlenecks, calculates schedule variance at the station level, and proves data freshness through a custom "Heartbeat" monitoring system.
 
 ## 🛠️ The Tech Stack
 * **Ingestion:** Python (Requests, GTFS-Realtime/Protobuf)
@@ -21,15 +23,20 @@ The pipeline extracts Protobuf feeds from the MTA API, loads them into BigQuery 
 
 ### 2. Custom Business Logic
 I implemented custom SQL logic in the BI layer to define system health:
-* **Stale Data:** Records with no updates for > 24 hours.
-* **Delayed:** Arrivals verified at ≥ 5 minutes behind schedule.
 * **On Time:** Arrivals within a 5-minute variance of the scheduled time.
+* **Slight Delay:** 5–10 minutes.
+* **Delayed:** 10–20 minutes.
+* **Major Delay:** > 20 minutes (verified by your average delay scorecard of 48.6 min).
 
 ## 📊 Dashboard Insights
 The final dashboard provides a "Transit Operations Center" view of the NYC subway system:
 * **Real-Time Fleet Map:** Live geospatial tracking of active trips.
 * **Service Reliability:** KPI scorecards measuring On-Time Performance (OTP).
 * **Traffic Analysis:** Identification of system bottlenecks at high-traffic stations like 42 St-Port Authority.
+* **Data Freshness Audit:** A real-time scatter plot proving sub-minute ingestion pulses from the MTA API to BigQuery.
 
 ## 📊 Live Dashboard
 [**Click here to view the Live NYC MTA Operational Dashboard**](https://lookerstudio.google.com/s/spKzCEr5uZ0)
+
+## 🏗️ Technical Architecture Refinement
+* **Line Coverage:** Specifically engineered to monitor the Eighth Avenue Line (A, C, E), handling the high-velocity data surges unique to the Manhattan trunk lines.
