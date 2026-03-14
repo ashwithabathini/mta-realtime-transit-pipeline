@@ -1,14 +1,14 @@
 # NYC MTA Real-Time Transit Data Pipeline
 
 ## 🚀 Executive Summary
-This project is an end-to-end ELT (Extract, Load, Transform) pipeline that ingests high-velocity transit data from the NYC MTA. It processes real-time subway arrival updates to monitor system performance, tracking over **48,900 records** with a 1-minute data freshness latency.
+This project is an end-to-end ELT (Extract, Load, Transform) pipeline that ingests high-velocity transit data from the NYC MTA. It processes real-time subway arrival updates to monitor system performance, tracking over **1M records a day** with a 1-minute data freshness latency.
 
 ## 🛠️ The Tech Stack
 * **Ingestion:** Python (Requests, GTFS-Realtime/Protobuf)
 * **Data Warehouse:** Google BigQuery
 * **Transformation:** dbt (Data Build Tool)
 * **Visualization:** Looker Studio
-(Steps.png)
+![Flow](Steps.png)
 
 ## 🏗️ Architecture & Lineage
 The pipeline extracts Protobuf feeds from the MTA API, loads them into BigQuery "Raw" tables, and utilizes **dbt** to sanitize Station IDs and join them with static GTFS data for geospatial mapping.
@@ -30,4 +30,5 @@ The final dashboard provides a "Transit Operations Center" view of the NYC subwa
 * **Service Reliability:** KPI scorecards measuring On-Time Performance (OTP).
 * **Traffic Analysis:** Identification of system bottlenecks at high-traffic stations like 42 St-Port Authority.
 
-![Dashboard Overview]
+## 📊 Live Dashboard
+[**Click here to view the Live NYC MTA Operational Dashboard**](https://lookerstudio.google.com/s/spKzCEr5uZ0)
