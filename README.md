@@ -8,13 +8,10 @@ This project is an end-to-end ELT (Extract, Load, Transform) pipeline that inges
 * **Data Warehouse:** Google BigQuery
 * **Transformation:** dbt (Data Build Tool)
 * **Visualization:** Looker Studio
+(Steps.png)
 
 ## 🏗️ Architecture & Lineage
 The pipeline extracts Protobuf feeds from the MTA API, loads them into BigQuery "Raw" tables, and utilizes **dbt** to sanitize Station IDs and join them with static GTFS data for geospatial mapping.
-
-### Data Lineage (dbt)
-The following graph shows the transformation flow from raw ingestion to the final analytical model:
-![Lineage Graph](lineage_graph.png)
 
 ## 💡 Key Engineering Challenges & Solutions
 ### 1. The ID Mismatch Problem
@@ -33,4 +30,4 @@ The final dashboard provides a "Transit Operations Center" view of the NYC subwa
 * **Service Reliability:** KPI scorecards measuring On-Time Performance (OTP).
 * **Traffic Analysis:** Identification of system bottlenecks at high-traffic stations like 42 St-Port Authority.
 
-![Dashboard Overview](Steps.png)
+![Dashboard Overview]
